@@ -135,7 +135,7 @@ tasks:
     enabled: true
     num_batches: 16
   trnascan:
-    enabled: true
+    enabled: false
     cmsearch_wnode: -exclusive-threshold 100000
     annot_merge: -euk -unique
     num_batches: 16

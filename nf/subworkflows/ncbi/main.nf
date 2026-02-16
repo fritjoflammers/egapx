@@ -15,7 +15,7 @@ include { setup_genome; setup_proteins } from './setup/main'
 include { convert_annotations } from './default/convert_annotations/main'
 include { convert_summary_files } from './default/convert_summary_files/main'
 include { cmsearch_plane } from './cmsearch/main'
-include { trnascan_plane } from './trna_scan/main'
+// include { trnascan_plane } from './trna_scan/main'
 include { busco } from './busco/main'
 include { winmask_plane } from './winmask/main'
 
