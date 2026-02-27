@@ -1,0 +1,7 @@
+genome: /cluster/work/gdc/shared/p757/data/milvus/reference_genome/milMil_1.3_rep1.fasta
+taxid: 43518
+long_reads: /cluster/home/flamme/code/egapx/M_milvus/input_reads.txt
+cmsearch:
+  enabled: false
+trnascan:
+  enabled: false

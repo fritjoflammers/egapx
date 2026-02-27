@@ -1,0 +1,11 @@
+adrenal_gland /cluster/work/gdc/shared/p757/data/milvus/annotation/clustered/adrenal_gland.clustered.bam.renamed.fasta
+brain /cluster/work/gdc/shared/p757/data/milvus/annotation/clustered/brain.clustered.bam.renamed.fasta
+gonads /cluster/work/gdc/shared/p757/data/milvus/annotation/clustered/gonads.clustered.bam.renamed.fasta
+heart /cluster/work/gdc/shared/p757/data/milvus/annotation/clustered/heart.clustered.bam.renamed.fasta
+kidney /cluster/work/gdc/shared/p757/data/milvus/annotation/clustered/kidney.clustered.bam.renamed.fasta
+liver /cluster/work/gdc/shared/p757/data/milvus/annotation/clustered/liver.clustered.bam.renamed.fasta
+lung /cluster/work/gdc/shared/p757/data/milvus/annotation/clustered/lung.clustered.bam.renamed.fasta
+muscle /cluster/work/gdc/shared/p757/data/milvus/annotation/clustered/muscle.clustered.bam.renamed.fasta
+retina /cluster/work/gdc/shared/p757/data/milvus/annotation/clustered/retina.clustered.bam.renamed.fasta
+spleen /cluster/work/gdc/shared/p757/data/milvus/annotation/clustered/spleen.clustered.bam.renamed.fasta
+stomach /cluster/work/gdc/shared/p757/data/milvus/annotation/clustered/stomach.clustered.bam.renamed.fasta
