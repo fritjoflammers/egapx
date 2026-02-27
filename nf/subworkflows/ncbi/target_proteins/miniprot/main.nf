@@ -80,8 +80,12 @@ process split_proteins {
 
 
 process run_miniprot {
-    label 'huge_job'
-    label 'long_job'
+    // label 'huge_job'
+    // label 'long_job'
+
+    cpus 16
+    memory 64.GB
+
     input:
         path fasta_genome_file
         path fasta_proteins_file

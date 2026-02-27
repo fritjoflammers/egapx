@@ -268,6 +268,8 @@ workflow setup_long_reads {
 }
 
 
+// modified function as suggested in: https://github.com/ncbi/egapx/issues/166
+// this is a workaround for long-reads not provided by SRA: https://github.com/ncbi/egapx/issues/198#issuecomment-3928857051
 process rename_fasta_ids {
     input:
         tuple val(sampleID), path(fastx, stageAs: "reads/*")
@@ -275,20 +277,14 @@ process rename_fasta_ids {
     output:
         tuple val(sampleID),  path ('output/*')  , emit: 'fasta_pair_list'
     script:
-        def file_name = fastx.getBaseName()
-        if (!file_name.endsWith(".fasta")) {
-            file_name += ".fasta"
-        }
+        file_name = fastx.getBaseName() + '.fasta'
         def srrFmt = String.format('SRR%08d', (srr_id as int))
     """
     mkdir -p output
     seqkit fq2fa -j 7 '${fastx}' | seqkit replace -j 7 -w 0 -p '.*' -r 'gnl|SRA|${srrFmt}.{nr}.1' > output/${file_name}
     """
     stub:
-        def file_name = fastx.getBaseName()
-        if (!file_name.endsWith(".fasta")) {
-            file_name += ".fasta"
-        }
+        file_name = fastx.getBaseName() + '.fasta'
     """
     mkdir -p output
     echo $srr_id > output/$file_name

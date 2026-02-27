@@ -86,7 +86,10 @@ process generate_jobs {
 
 
 process run_chainer {
-    label 'long_job'
+    
+    memory 4.GB
+    cpus 4
+    
     input:
         path job
         path alignments

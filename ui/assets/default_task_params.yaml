@@ -54,11 +54,11 @@ tasks:
       --runRNGseed 777 --outMultimapperOrder Old_2.4 --outSAMorder PairedKeepInputOrder
   miniprot:
     split_proteins: -n 25000
-    miniprot: -t 31 -p 0.4 --outs=0.4
+    miniprot: -t 16 -p 0.4 --outs=0.4
   minimap2_index:
     minimap2_index: -k 15 -w 5
   minimap2_wnode:
-    gpx_qsubmit: -batch-size 5000 -max-execs 100
+    gpx_qsubmit: -batch-size 20000 -max-execs 100
     minimap2_wnode: -est_colocation_weight 0 -min-entropy 0.65
       -workers 1 -generate-stats
       -output_one_orientation_only -trust_input_collation -with-best-placement

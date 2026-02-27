@@ -157,7 +157,11 @@ process gpx_qsubmit {
 
 process minimap2_wnode {
     maxForks 50
-    label 'long_job'
+    // redkite specific requirements
+    time 1.h
+    memory 20.GB
+    cpus 2
+    
     input:
         path genome_fasta, stageAs: "genome/*"
         path genome_index // minimap2 index, addressed indirectly via job file
